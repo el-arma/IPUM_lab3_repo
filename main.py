@@ -34,3 +34,4 @@ if __name__ == "__main__":
 
     print("APP_NAME: ", settings.APP_NAME)
     print("ENVIRONMENT: ", settings.ENVIRONMENT)
+    print("API_KEY: ", os.environ["API_KEY"])
