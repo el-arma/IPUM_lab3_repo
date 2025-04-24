@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from api.model.iris import PredictRequest, PredictResponse
+from model.iris import PredictRequest, PredictResponse
 from inference import SVMModel
-# import uvicorn
+
 
 app = FastAPI()
 
@@ -28,10 +28,6 @@ def predict(request: PredictRequest):
 
     return PredictResponse(prediction=iris_dict[prediction[0]])
 
-
-# to be corrected:
-# if __name__ == "__main__":
-#     uvicorn.run("app:app", host = "127.0.0.1", port = 8000, reload = True)
 
 # # START ME:
 # uv run uvicorn app:app --reload --port=8000
